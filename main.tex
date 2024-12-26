@@ -1,0 +1,175 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{graphicx}       % Grafiken einfügen
+\usepackage{geometry}       % Seitenränder einstellen
+\usepackage{setspace}       % Zeilenabstand
+\usepackage{tocloft}        % Inhaltsverzeichnis Formatierung
+\usepackage{float}          % Für [H] Platzierung
+\usepackage[ngerman]{babel} % Deutsche Einstellungen
+\usepackage{booktabs}
+\usepackage{fancyhdr}       % Für Kopf- und Fußzeile
+\usepackage{lastpage}       % Für Seitenzahl der letzten Seite
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage{array}
+\renewcommand{\arraystretch}{1.5} % Erhöht den Zeilenabstand
+\setlength{\arrayrulewidth}{0.5mm} % Dicke der Linien
+\setlength{\tabcolsep}{10pt} % Abstand der Spalte
+
+
+%Keine Ahnung. Irgend a Error wegen Überschrift vo 1.10
+\setlength{\headheight}{15pt}
+% Den Abstand zwischen Absätzen und Überschriften anpassen
+\setlength{\parskip}{0pt} % Abstand zwischen Absätzen
+\setlength{\parindent}{0pt} % Kein Einrücken von Absätzen
+
+% Seitenränder
+\geometry{a4paper, top=25mm, left=25mm, right=25mm, bottom=35mm} 
+
+% Abstand zwischen Kopfzeile und Text anpassen
+\setlength{\headsep}{15mm}  % Abstand zwischen Kopfzeile und Text
+\setlength{\footskip}{15mm} % Abstand zwischen Fußzeile und Text 
+% Kopf- und Fußzeile definieren
+\pagestyle{fancy}
+\fancyhf{} % Alle Kopf- und Fußzeilen leeren
+
+% Kopfzeile: Logo links, Kapitelname rechts
+%\fancyhead[L]{\includegraphics[width=1.8cm]{Bilder_Sonstiges/Fhooe-logo.png}} % Pfad zum Logo anpassen
+\fancyhead[R]{\nouppercase{\leftmark}} % Kapitelname in der Kopfzeile
+
+% Fußzeile: Seitenzahl
+\fancyfoot[C]{Seite \thepage\ von\pageref{LastPage}}
+
+% Titelseite ohne Kopf- und Fußzeile
+\fancypagestyle{plain}{
+  \fancyhf{} % leere Kopf- und Fußzeile
+  \fancyfoot[C]{Seite \thepage\ von\pageref{LastPage}} % Seitenzahl zur Titelseite hinzufügen
+}  
+
+
+
+
+\begin{document}
+
+\include{Titelblatt}
+
+\newpage
+\tableofcontents % Erstellt das Inhaltsverzeichnis
+\newpage
+
+% Teil 1
+\include{Teil1}
+
+% Teil 2
+\include{Teil2}
+
+% Teil 3
+\include{Teil3}
+
+% Teil 4
+\include{Teil4}
+
+% Teil 5
+\include{Teil5}
+
+\end{document}
+
+
+
+
+%-------------------------------------------------------------------------------------------
+\begin{comment}
+------------------------------------------------------------------------------------------------
+Mögliche Zusätze:
+
+Teil 2:
+Anforderungen Validierung vs Verifikation
+Anforderungen verwalten
+
+Teil3:
+Produktstruktur (Bereiche, Freiheitsgrade)
+DSM Lesekonvektion
+Weitere DSM (Vor Arten DSM)
+klassifizierung DSM
+Erstellen / Aufbauen DSM
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------
+Bereich für Code Vorlagen für Copy-Paste:
+
+
+---Einfache Aufzählung---
+
+\begin{itemize}
+    \item Erster
+    \item Zweiter
+    \item Dritter
+\end{itemize}
+
+
+---Aufzählung mit Beschreibung---
+
+\begin{description}[style=nextline]
+    \item[Begriff1] Beschreibung1
+    \item[Begriff2] Beschreibung2
+    \item[Begriff3] Beschreibung3
+\end{description}
+
+itemsep=0pt: Abstand zwischen den einzelnen Listenelementen.
+topsep=0pt: vertikalen Abstand vor und nach der gesamten Liste.
+parsep=0pt: Abstand zwischen Absätzen innerhalb der Listenelemente.
+partopsep=0pt: Abstand zwischen den Listenelementen und dem vorherigen oder folgenden Text.
+
+---Aufzählung mit Unterpunkten---
+
+\begin{itemize}
+    \item ErsterPunkt
+        \begin{itemize}
+            \item Unterpunkt1
+            \item Unterpunkt2
+        \end{itemize}
+    \item ZweiterPunkt
+        \begin{itemize}
+            \item Unterpunkt1
+            \item Unterpunkt2
+        \end{itemize}
+\end{itemize}
+
+
+---Einzelnes Bild---
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Pfad}
+    \caption{CAPTION}
+    \label{LABEL}
+\end{figure}
+
+---Zwei Bilder nebeneinander---
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.45\textwidth}  % 't' sorgt dafür, dass die minipage an der Oberkante ausgerichtet ist
+        \centering
+        \includegraphics[width=\linewidth]{Pfad1}
+        \caption{Caption1}
+    \end{minipage} \hfill
+    \begin{minipage}[t]{0.45\textwidth}  % 't' sorgt für gleiche Ausrichtung der Unterschriften
+        \centering
+        \includegraphics[width=\linewidth]{Pfad2}
+        \caption{Caption2}
+    \end{minipage}
+    \caption{CaptionBeide}
+\end{figure}
+
+\end{comment}

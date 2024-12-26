@@ -1,0 +1,15 @@
+# LaTeX temporary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.blg
+*.bbl
+*.run.xml
+*.synctex.gz
+*.pdfsync
+*.swp    # falls du vim verwendest
