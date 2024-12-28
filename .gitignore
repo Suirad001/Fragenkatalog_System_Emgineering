@@ -11,5 +11,4 @@
 *.bbl
 *.run.xml
 *.synctex.gz
-*.pdfsync
 *.swp    # falls du vim verwendest
