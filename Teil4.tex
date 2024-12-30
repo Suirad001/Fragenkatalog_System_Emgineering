@@ -20,6 +20,10 @@ Dies bedeutet, dass bei allen Überlegungen die Frage nach der Zweckmäßigkeit 
 % subsection
 %-------------------------------------------------------------------------------------------
 \subsection{Was bedeutet Problemlösung durch Abstraktion (Modellbildung) und Interpretation?}
+Vorgehensweise der Modellbildung wird auf eine abstrakte Ebene verlagert, um die Lösungsfindung zu vereinfachen. 
+
+\textbf{Zielgerichtete Vereinfachung durch Abstraktion.}
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\linewidth]{Bilder/Teil4_ProblemlösungdurchAbstraktionundInerpretation.png}
@@ -32,28 +36,32 @@ Dies bedeutet, dass bei allen Überlegungen die Frage nach der Zweckmäßigkeit 
 \subsection{Welche Verfahren der Modellbildung gibt es?}
 \begin{itemize}
     \item \textbf{Rechnerische Verfahren:}\\
-    Dazu werden \textbf{mathematische Modelle} benötigt, die formal durch \textbf{Gleichungen} (algebraisch oder differenzial)
-    beschrieben werden, zu deren Lösung heute neben den traditionellen analytischen Verfahren leistungsfähige numerische und 
-    symbolische Softwareprogramme zur Verfügung stehen.
+    Dazu werden \textbf{mathematische Modelle} benötigt, die formal durch \textbf{Gleichungen} beschrieben werden.
+    
+    Heutzutage stehen neben den traditionellen Methoden numerische und symbolische Softwareprogramme zu Verfügung.
+    
     \item \textbf{Experimentelle bzw. messtechnische Verfahren:}\\
-    Zu ihrer ANwendung werden \textbf{physikalische (experimentelle) Modelle} benötigt, an denen Versuche, Messungen und Auswertungen
-    durchgeführt werden können. Im Maschinenbau etwa sind dies typischerweise Prototypen, Testobjekte, VErsuchsanordnungen oder
-    maßstäbliche Modelle. Mit Hilfe der physikalischen Modelle sollen alle wesentlichen Einflüsse "messtechnisch" erfasst werden.
+    Zu ihrer Anwendung werden \textbf{physikalische (experimentelle) Modelle} benötigt, an denen Versuche, Messungen und Auswertungen
+    durchgeführt werden können. Dadurch sollen wesentliche Einflüsse messtechnisch erfasst werden.
+    
+    Im Maschinenbau etwa sind dies typischerweise Prototypen, Testobjekte, Versuchsanordnungen oder
+    maßstäbliche Modelle.
+
     \item \textbf{Hybride Verfahren} (Kombination von Berechnung und Experiment bzw. Messung):\\
     Diese Verfahren \textbf{nutzen sowohl Messgrößen as auch mathematische Modelle.} Während bei rechnerischen Verfahren Fehler aufgrund
     von Modellierungsungenauigkeiten auftreten, sind bei experimentellen Verfahren mehr oder weniger große Messfehler unvermeidbar.
+    
     Liegen sowohl mathematische Modelle als auch Messergebnisse vor, so kann man versuchen, Hypothesen über die Art der Fehler 
-    zu bilden und das Modell anhand der Messergebnisse zu verbessern, dass sich eine bessere Übereinstimmung von Rechnung und 
-    Experiment ergibt.
+    zu bilden und das Modell anhand der Messergebnisse zu verbessern.
 \end{itemize}
 
 % subsection
 %-------------------------------------------------------------------------------------------
 \subsection{Wie ist der Ablauf zur Entstehung eines rechnerinternen Modells?}
 \begin{itemize}
-    \item Der Modellbildner entwickelt eine gedankliche Vorstellung des zu untersuchenden Originals (z.B. eines realen 
-    technischen objekts oder eines neuen Produkts) in Form eines mentalen Modells (Gedankenmodells), das anschließend 
-    zu einer Erfassung in eine formalisierte Informationsform mit Hilfe von Informationselementen und -strukturen gebracht wird.
+    \item Der Modellbildner entwickelt eine gedankliche Vorstellung des zu untersuchenden Originals (z.B. reales
+    objekt oder neues Produkt) in Form eines mentalen Modells (Gedankenmodells), das anschließend 
+    zu seiner Erfassung in eine formalisierte Informationsform mit Hilfe von Informationselementen und -strukturen gebracht wird.
     \item Dieses \glqq Informationsmodell\grqq wird am Rechner implementiert (rechnerinternes Modell).
 \end{itemize}
 \begin{figure}[H]
@@ -65,29 +73,30 @@ Dies bedeutet, dass bei allen Überlegungen die Frage nach der Zweckmäßigkeit 
 % subsection
 %-------------------------------------------------------------------------------------------
 \subsection{Was ist bei der Interpretation von Ergebnissen wichtig?}
-Eine wichtige Aufgabe des Produktentwicklers (Versuchstechnikers, Berechnungsingenieurs) ist die 
+Eine wichtige Aufgabe des Produktentwicklers ist die 
 Interpretation der Ergebnisse. Dazu muss er zwischen physikalischen Phänomenen und künstlichen Effekten 
-(Artefakten), die z.B. von Messfehlern bzw. numerischen Lösungsverfahren herrühren, unterscheiden können. Dies 
-erfordert Kenntnisse und Erfahrung sowohl über die untersuchten Fragestellungen als auch über die (z.B. 
-versuchstechnischen bzw. numerischen) Verfahren, die zur Lösung des Modellproblems verwendet werden. Einfache, 
-überschlägige Abschätzungen und Erfahrung sind unerlässlich, um die Ergebnisse (Messergebnisse bzw. Rechenergebnisse) 
+(Artefakten), die z.B. von Messfehlern bzw. numerischen Lösungsverfahren herrühren, unterscheiden können. 
+
+Dies erfordert Kenntnisse und Erfahrung sowohl über die untersuchten Fragestellungen als auch über die Verfahren, die zur Lösung des Modellproblems verwendet werden. 
+
+Einfache, überschlägige Abschätzungen und Erfahrung sind unerlässlich, um die Ergebnisse (Messergebnisse bzw. Rechenergebnisse) 
 zu überprüfen sowie zu bewerten und damit hohe Qualität der Simulation sicherzustellen.
 
 % subsection
 %-------------------------------------------------------------------------------------------
 \subsection{Was bedeutet Simulation und wofür ist dies relevant?}
-In der VDI-Richtlinie 3633 mit dem Titel „Simulation von Logistik-, Materialfluss- 
-und Produktionssystemen – Begriffsdefinitionen“ [VDI-3633] ist Simulation wie folgt definiert:
-\begin{itemize}
-    \item  Simulation ist ein Verfahren zur Nachbildung eines Systems mit seinen 
-    dynamischen Prozessen in einem experimentierbaren Modell, um zu 
-    Erkenntnissen zu gelangen, die auf die Wirklichkeit übertragbar sind. Im 
-    weiteren Sinne wird unter Simulation das Vorbereiten, Durchführen und 
-    Auswerten gezielter Experimente mit einem Simulationsmodell verstanden. Mit 
-    Hilfe der Simulation kann das zeitliche Ablaufverhalten komplexer Systeme 
-    untersucht werden (Simulationsmethode).    
-\end{itemize}
-Simulationen werden dann durchgeführt wenn:
+
+Simulation ist ein Verfahren zur Nachbildung eines Systems mit seinen 
+dynamischen Prozessen in einem experimentierbaren Modell, um zu 
+Erkenntnissen zu gelangen, die auf die Wirklichkeit übertragbar sind. 
+
+Im weiteren Sinne wird unter Simulation das Vorbereiten, Durchführen und 
+Auswerten gezielter Experimente mit einem Simulationsmodell verstanden. 
+
+Mit Hilfe der Simulation kann das zeitliche Ablaufverhalten komplexer Systeme 
+untersucht werden.    
+
+Simulationen werden durchgeführt wenn:
 \begin{itemize}
     \item kein reales System verfügbar ist (Entwurfsphase)
     \item das Experiment am realen System zu lange dauert
